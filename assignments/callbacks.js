@@ -59,21 +59,19 @@ console.log(multiplyNums(4,8, function(product){
   return product;
 }))
 
-items.filter(function(element, item){
-  return element === item;
+let containsTheItem = list.filter(function(element) {
+  if (element === item) {
+     return cb(true)
+
+  }
+  
 })
+ 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  for (i = 0 ; i < list.length ; i ++) {
-    if(list[i] === item) {
-      return cb(true)
-    }
-    else {
-      return cb(false);
-    }
+    
   }
-}
     
 
 console.log(contains('Pencil', items, function(containsItem){
