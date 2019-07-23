@@ -36,7 +36,7 @@ console.log(getLength (items, function(length) {
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  return cb(arr.pop())
+  return cb(arr.slice(3,4))
 }
 
 console.log(last(items, function(lastItem){
@@ -59,19 +59,19 @@ console.log(multiplyNums(4,8, function(product){
   return product;
 }))
 
-let containsTheItem = list.filter(function(element) {
-  if (element === item) {
-     return cb(true)
-
-  }
-  
-})
  
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-    
+  for (i = 0 ; i < list.length ; i ++) {
+    if(list[i] === item) {
+      return cb(true)
+    }
+    else {
+      return cb(false);
+    }
   }
+}
     
 
 console.log(contains('Pencil', items, function(containsItem){
@@ -84,7 +84,13 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let newArray = array.filter(function(item ,position){
+    return array.indexOf(item) == position;
+  })
+    return cb(newArray);
   
 }
-console.log()
+console.log(removeDuplicates(items, function(noDuplicates){
+  return noDuplicates;
+}))
 
