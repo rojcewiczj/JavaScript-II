@@ -65,17 +65,17 @@ function contains(item, list, cb) {
   // Pass true to the callback if it is, otherwise pass false.
   let foundItem = list.filter(function(element){
     if(element === item) {
-      return true
+       console.log(true)
     } 
     else {
-      return false
+      console.log(false)
     }
   });
   return cb(foundItem);
 }
     
 
-console.log(contains('pie', items, function(containsItem){
+console.log(contains('Gum', items, function(containsItem){
   return containsItem;
 }))
 
