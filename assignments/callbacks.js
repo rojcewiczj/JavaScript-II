@@ -62,18 +62,19 @@ console.log(multiplyNums(4,8, function(product){
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  for (i = 0, i < list.length ; i ++ ) {
+  for (i = 0 ; i < list.length ; i ++) {
     if(list[i] === item) {
-      return cb(true);
+      return cb(true)
     }
     else {
       return cb(false);
     }
   }
-};
+}
+    
 
-console.log(contains("Gum", items, function(){
-  
+console.log(contains('Pencil', items, function(containsItem){
+  return containsItem;
 }))
 
 /* STRETCH PROBLEM */
@@ -82,4 +83,7 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  
 }
+console.log()
+
