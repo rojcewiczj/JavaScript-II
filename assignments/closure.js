@@ -1,6 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+const neighborhood = function(){
+ let houses = 12;
+ console.log(`we have ${houses} houses in the neighborhood`)
+ const house = function () {
+   let rooms = 4;
+   console.log(`we have ${rooms} in my house`);
+ }
+}
+neighborhood();
+house();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
